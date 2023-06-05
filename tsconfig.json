@@ -1,0 +1,12 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"],
+  "typeAcquisition": {
+    "include": ["jest"]
+  }
+}
