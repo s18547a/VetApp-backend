@@ -172,9 +172,7 @@ class VaccineRepository extends Repository {
 				.request()
 				.input('VaccineType', sql.VarChar, vacccineType)
 				.input('Species', sql.VarChar, species)
-				.query(
-					'Select * From VaccineType Where VaccineType=@VaccineType and Species=@Species'
-				);
+				.query('Select * From VaccineType Where VaccineType=@VaccineType ');
 			if (results.recordset[0]) {
 				return null;
 			}
