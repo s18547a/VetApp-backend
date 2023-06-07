@@ -7,8 +7,6 @@ import {
 	postResponseHandler,
 } from '../utils/responseHandler';
 
-//const VisitRepository = require('../models/repositories/VisitRepository');
-
 class VisitController {
 	visitRepository: VisitRepository;
 	medicalActivityRepository: MedicalActivityRepository;

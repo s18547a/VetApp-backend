@@ -7,8 +7,6 @@ import {
 	postResponseHandler,
 } from '../utils/responseHandler';
 
-//const ReservationRepositoy = require('../models/repositories/ReservationRepository');
-
 class ReservationController {
 	reservationRepository: ReservationRepository;
 
