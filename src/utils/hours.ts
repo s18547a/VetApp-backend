@@ -1,4 +1,3 @@
-//stwarza listę dostępnych godzin na podstawie godzin pracy weterynarza
 export function createVetVisitHours(VetWorkingHours: string) {
 	const beginEndHours = VetWorkingHours.split('-');
 

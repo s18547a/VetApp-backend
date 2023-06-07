@@ -41,7 +41,7 @@ class ScheduldeHelperRepository extends Repository {
 				bookedHours = bookedReservations.map((reservation) => {
 					return reservation.Hour;
 				});
-				//usuwa z listy termniów już zajęta
+
 				receptionHours = receptionHours.filter((bookedHour) => {
 					return !bookedHours.includes(bookedHour);
 				});
@@ -54,7 +54,6 @@ class ScheduldeHelperRepository extends Repository {
 				});
 
 			if (bookedSurgeries != null) {
-				//stwarza listę list potrzebnych terminów dla każdego dostępnego temniów zabiegu
 				const unavalilableHoursArrays: string[][] = bookedSurgeries.map(
 					(surgery) => {
 						return getBusyNextHourFromSurgery(surgery.StartTime);
@@ -63,7 +62,6 @@ class ScheduldeHelperRepository extends Repository {
 
 				let unavalilableHour: string[] = [];
 
-				//na podstawie listy list tworzy listę godzin będących potrzebnych do realizacji zabiegu
 				unavalilableHoursArrays.forEach((hoursArray) => {
 					unavalilableHour = unavalilableHour.concat(hoursArray);
 
@@ -71,7 +69,7 @@ class ScheduldeHelperRepository extends Repository {
 						return unavalilableHour.indexOf(item) == index;
 					});
 				});
-				//przelifrowuje listę zabiegów z listy rezerwacji
+
 				receptionHours = receptionHours.filter((hour) => {
 					return !unavalilableHour.includes(hour);
 				});

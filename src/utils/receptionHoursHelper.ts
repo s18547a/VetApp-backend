@@ -8,7 +8,6 @@ export function getBusyNextHourFromSurgery(surgeryHour) {
 	const nextNextHourString: string =
 		nextNextHour < 10 ? `0${String(nextNextHour)}` : String(nextNextHour);
 
-	//create next necessery reservation times
 	let onePart: string = surgeryHour;
 	let twoPart: string = '';
 	let threePart: string = '';
@@ -52,25 +51,18 @@ export function getBusyNextHourFromSurgery(surgeryHour) {
 }
 
 export function createSurgeryAvailableHours(receptionHours): string[] {
-	console.log('IM HERE');
-	//Sprawdza czy kolejne 5 terminów przyjęć jest wolna, aby rezerwacja zabiegu była możliwa
 	const availableSurgeryTime = receptionHours.filter((surgeryHour) => {
 		console.log(surgeryHour);
-
-		//cut from available hours
 
 		const arrayToSlice: string[] = receptionHours.map((x) => x);
 
 		const index: number = receptionHours.indexOf(surgeryHour);
 
-		//stwórz tablice z 6 kolejnych dostępnych terminów
 		const splicedArray: string[] = arrayToSlice.splice(index, 6);
 
-		//tworzy listę potrzebych terminów
 		const necesseryHoursArray: string[] =
 			getBusyNextHourFromSurgery(surgeryHour);
 
-		//porównuje listę terminów oraz aktualną listę terminów
 		const equals: boolean =
 			JSON.stringify(necesseryHoursArray) === JSON.stringify(splicedArray);
 
