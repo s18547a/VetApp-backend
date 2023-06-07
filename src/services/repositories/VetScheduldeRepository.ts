@@ -72,7 +72,6 @@ class VetScheduldeRepository extends Repository {
 
 	updateSchedulde = async (schedulde) => {
 		try {
-			console.log(schedulde);
 			const vetId: string = schedulde.VetId;
 			const monday: string | null = checkScheduldeFormat(schedulde.Monday);
 			const tuesday: string | null = checkScheduldeFormat(schedulde.Tuesdayc);
@@ -135,7 +134,7 @@ class VetScheduldeRepository extends Repository {
 			const pool = await sql.connect(this.databaseConfiguration);
 
 			const day: string = getDayOfAWeekName(paramters.date);
-			console.log(day);
+
 			const scheduldePool = await pool
 				.request()
 				.input('VetId', sql.VarChar, paramters.vetId)
