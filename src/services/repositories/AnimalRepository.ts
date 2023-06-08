@@ -73,7 +73,7 @@ class AnimalRepostiory extends Repository {
 				const result = await pool
 					.request()
 					.query(
-						'Select AnimalId, Name, BirthDate, AnimalTypeId, OwnerId, Sex  From Animal'
+						'Select AnimalId, Name, BirthDate, AnimalTypeId, OwnerId, Sex  From Animal Order by Name'
 					);
 				animalsRecordset = result.recordset;
 			} else if (parameters.ownerId) {
@@ -81,14 +81,14 @@ class AnimalRepostiory extends Repository {
 					.request()
 					.input('OwnerId', sql.VarChar, parameters.ownerId)
 					.query(
-						'Select AnimalId, Name, BirthDate, AnimalTypeId, OwnerId, ProfileImage, Sex From Animal Where OwnerId=@OwnerId'
+						'Select AnimalId, Name, BirthDate, AnimalTypeId, OwnerId, ProfileImage, Sex From Animal Where OwnerId=@OwnerId Order by Name'
 					);
 				animalsRecordset = result.recordset;
 			} else if (parameters.email) {
 				const result = await pool
 					.request()
 					.query(
-						`Select AnimalId,Name,BirthDate,u.OwnerId,Sex,AnimalTypeId From Animal a join [User] u on a.OwnerId=u.OwnerId   where u.Email like '${parameters.email}%'`
+						`Select AnimalId,Name,BirthDate,u.OwnerId,Sex,AnimalTypeId From Animal a join [User] u on a.OwnerId=u.OwnerId   where u.Email like '${parameters.email}%' Order by Name`
 					);
 				animalsRecordset = result.recordset;
 			}

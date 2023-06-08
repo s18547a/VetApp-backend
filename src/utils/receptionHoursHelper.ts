@@ -1,4 +1,4 @@
-export function getBusyNextHourFromSurgery(surgeryHour) {
+export function getBusyNextHourFromSurgery(surgeryHour: string) {
 	//Godzina
 	const [hour, minute] = surgeryHour.split(':');
 	const nextHour: number = parseInt(hour) + 1;
