@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'VetApp-Backend'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AED13B4D77FB4AA29A351C161351003F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2EB41D3707294D1DBEBDDBDE128CB5A7 }}
           package: .
