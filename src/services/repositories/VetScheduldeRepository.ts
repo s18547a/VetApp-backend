@@ -74,7 +74,7 @@ class VetScheduldeRepository extends Repository {
 		try {
 			const vetId: string = schedulde.VetId;
 			const monday: string | null = checkScheduldeFormat(schedulde.Monday);
-			const tuesday: string | null = checkScheduldeFormat(schedulde.Tuesdayc);
+			const tuesday: string | null = checkScheduldeFormat(schedulde.Tuesday);
 			const wednesday: string | null = checkScheduldeFormat(
 				schedulde.Wednesday
 			);
