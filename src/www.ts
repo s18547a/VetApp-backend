@@ -1,5 +1,3 @@
-/* eslint-disable require-jsdoc */
-// var app = require("../src/app.ts");
 const debug = require('debug')('backend:server');
 const http = require('http');
 import createApp from './app';
