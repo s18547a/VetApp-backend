@@ -166,7 +166,7 @@ class VaccineRepository extends Repository {
 			const vacccineType = vaccine.VaccineType.trim();
 			const species = vaccine.Species;
 			const core = vaccine.Core;
-
+			console.log(vacccineType);
 			const pool = await sql.connect(this.databaseConfiguration);
 			let results = await pool
 				.request()
