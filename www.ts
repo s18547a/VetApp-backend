@@ -1,8 +1,8 @@
 const debug = require('debug')('backend:server');
 const http = require('http');
-import createApp from './app';
-const config = require('../src/config/mssql/UserConnection');
-const azureConfig = require('../src/config/mssql/azureConnection');
+import createApp from './src/app';
+const config = require('./src/config/mssql/UserConnection');
+const azureConfig = require('./src/config/mssql/azureConnection');
 //const config= require('../src/config/mssql/testConnection');
 const app = createApp(azureConfig);
 const port = normalizePort(process.env.PORT || '8000');
