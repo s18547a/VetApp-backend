@@ -9,5 +9,7 @@
     "**/Thumbs.db": false,
     "node_modules/**": true
   },
-  "explorerExclude.backup": {}
+  "explorerExclude.backup": {},
+  "appService.defaultWebAppToDeploy": "/subscriptions/0fe864f1-a596-4e46-8304-faee1c91f1af/resourceGroups/Backend/providers/Microsoft.Web/sites/VetBackendSecond",
+  "appService.deploySubpath": "."
 }
