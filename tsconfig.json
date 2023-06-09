@@ -3,10 +3,15 @@
   "compilerOptions": {
     "noImplicitAny": false,
     "moduleResolution": "node",
+    "esModuleInterop": true,
   },
-  "include": ["src"],
+  "include": ["/**/*.ts"],
   "exclude": ["node_modules"],
   "typeAcquisition": {
     "include": ["jest"]
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
   }
 }
