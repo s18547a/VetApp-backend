@@ -40,7 +40,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
-const serveIndex = require('serve-index');
+
 const app = express();
 
 // eslint-disable-next-line require-jsdoc
@@ -51,7 +51,7 @@ export default function (db) {
 	app.use(express.json({ limit: '50mb' }));
 	app.use(express.urlencoded({ extended: false }));
 	app.use(cookieParser());
-	app.use('/public', serveIndex(path.join(__dirname, 'public')));
+
 	app.use(express.static(path.join(__dirname, 'public')));
 	app.use(
 		cors({
