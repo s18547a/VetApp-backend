@@ -32,6 +32,10 @@ export interface GetVetParameters {
 	vetType: string;
 }
 
+export interface GetAnimalType {
+	animalTypeId: string | undefined;
+}
+
 export interface GetVisitPrarameters {
 	animalId: string;
 	vetId: string;

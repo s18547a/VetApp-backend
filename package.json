@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+  
     "start": "ts-node ./bin/www.ts"
   },
   "dependencies": {
@@ -16,11 +17,14 @@
     "http-errors": "~1.6.3",
     "jade": "^1.9.2",
     "jsonwebtoken": "^9.0.0",
+    "kuduscript": "^1.0.17",
     "morgan": "~1.9.1",
     "mssql": "^8.1.2",
+    "node-typescript-compiler": "^3.0.0",
     "nodemon": "^2.0.22",
     "serve-index": "^1.9.1",
     "translate": "^1.4.1",
+    "ts-node": "^10.9.1",
     "tsc": "^2.0.4",
     "tsconfig": "^7.0.0",
     "uuid": "^9.0.0"

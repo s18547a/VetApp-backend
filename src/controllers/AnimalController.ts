@@ -3,7 +3,7 @@ import AnimalRepostiory from '../services/repositories/AnimalRepository';
 import AnimalTypeRepository from '../services/repositories/AnimalTypeRepository';
 import AnimalMedicalInfoRepository from '../services/repositories/AnimalMedicalInfoRepository';
 import AnimalIllnessRepository from '../services/repositories/AnimalIllnessRepository';
-import { GetAnimals } from '../common/Types';
+import { GetAnimalType, GetAnimals } from '../common/Types';
 import AnimalMedicalInfo from '../models/AnimalMedicalInfo';
 import {
 	getResponseHandler,
@@ -65,7 +65,7 @@ class AnimalController {
 	};
 
 	getAnimalTypes = async (req, res) => {
-		const parameters: { animalTypeId: string | undefined } = {
+		const parameters: GetAnimalType = {
 			animalTypeId: req.query.AnimalTypeId,
 		};
 		const results = await this.animalTypeRepository.getAnimalTypes(parameters);
