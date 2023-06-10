@@ -3,8 +3,10 @@
   "compilerOptions": {
     "noImplicitAny": false,
     "moduleResolution": "node",
+    "esModuleInterop": true,
   },
-  "include": ["src", ""],
+  "allowImportingTsExtensions":"true",
+  "include": ["src", "bin/www.ts"],
   "exclude": ["node_modules"],
   "typeAcquisition": {
     "include": ["jest"]
