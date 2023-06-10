@@ -1,4 +1,4 @@
-var config = {
+const config = {
 	server: 'vet-database.database.windows.net', //update me
 	database: 'vet-db',
 	authentication: {

@@ -1,4 +1,4 @@
-var config = {
+const config = {
 	server: 'localhost', //update me
 	database: 'Vet_test',
 	authentication: {

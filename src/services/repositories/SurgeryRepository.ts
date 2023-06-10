@@ -129,8 +129,6 @@ class SurgeryRepository extends Repository {
 							surgery.StartTime,
 							surgerysVet,
 							surgerysAnimal
-
-							// surgeryAssistants
 						);
 					})
 				);
@@ -249,8 +247,6 @@ class SurgeryRepository extends Repository {
 							surgery.StartTime,
 							surgerysVet,
 							surgerysAnimal
-
-							// surgeryAssistants
 						);
 					})
 				);
