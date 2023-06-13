@@ -1,9 +1,9 @@
 const debug = require('debug')('backend:server');
-const http = require('http');
+import http from 'http';
 import createApp from '../src/app';
 
 //const config = require('./src/config/mssql/UserConnection');
-const azureConfig = require('../src/config/mssql/azureConnection');
+import azureConfig from '../src/config/mssql/azureConnection';
 
 //const config= require('../src/config/mssql/testConnection');
 const app = createApp(azureConfig);
@@ -55,6 +55,6 @@ function onError(error) {
 
 function onListening() {
 	const addr = server.address();
-	const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
+	const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr!.port;
 	debug('Listening on ' + bind);
 }
