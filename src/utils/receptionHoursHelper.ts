@@ -52,8 +52,6 @@ export function getBusyNextHourFromSurgery(surgeryHour: string) {
 
 export function createSurgeryAvailableHours(receptionHours): string[] {
 	const availableSurgeryTime = receptionHours.filter((surgeryHour) => {
-		console.log(surgeryHour);
-
 		const arrayToSlice: string[] = receptionHours.map((x) => x);
 
 		const index: number = receptionHours.indexOf(surgeryHour);

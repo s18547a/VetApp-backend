@@ -3,8 +3,7 @@ export function createVetVisitHours(VetWorkingHours: string) {
 
 	const startHour: number = Number(beginEndHours[0].split(':')[0]);
 	const endHour: number = Number(beginEndHours[1].split(':')[0]);
-	console.log(startHour);
-	console.log(endHour);
+
 	const times: string[] = [];
 	for (let i = startHour; i < endHour; i++) {
 		if (i < 10) {

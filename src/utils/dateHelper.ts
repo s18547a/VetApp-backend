@@ -7,7 +7,7 @@ export function getCurrentDate() {
 
 export function getDayOfAWeekName(NewDate: string): string {
 	const newDate: Date = new Date(NewDate);
-	console.log(newDate);
+
 	return newDate.toLocaleDateString('en-PL', { weekday: 'long' });
 }
 
