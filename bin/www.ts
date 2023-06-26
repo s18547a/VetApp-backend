@@ -4,14 +4,15 @@ import createApp from '../src/app';
 
 //const config = require('./src/config/mssql/UserConnection');
 import azureConfig from '../src/config/mssql/azureConnection';
-
+import config from '../src/config/mssql/UserConnection';
 //const config= require('../src/config/mssql/testConnection');
+import serverless from 'serverless-http';
 const app = createApp(azureConfig);
 const port = normalizePort(process.env.PORT || '8000');
 app.set('port', port);
 
 const server = http.createServer(app);
-
+const servelessAPI = serverless(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
@@ -58,3 +59,5 @@ function onListening() {
 	const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr!.port;
 	debug('Listening on ' + bind);
 }
+
+export default servelessAPI;

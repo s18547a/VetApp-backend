@@ -20,7 +20,6 @@ class AnimalRepostiory extends Repository {
 		super(databse);
 		this.animalTypeRepository = animalTypeRepository;
 		this.ownerRepository = ownerRepository;
-		//
 	}
 	getAnimal = async (animalId: string) => {
 		try {
