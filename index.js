@@ -1,2 +1,2 @@
 require('ts-node/register');
-require('./server.ts');
+require('./bin/www.ts');
