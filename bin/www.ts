@@ -12,7 +12,9 @@ const port = normalizePort(process.env.PORT || '8000');
 app.set('port', port);
 
 const server = http.createServer(app);
+
 const servelessAPI = serverless(app);
+
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
@@ -60,4 +62,4 @@ function onListening() {
 	debug('Listening on ' + bind);
 }
 
-export default servelessAPI;
+export const handler = servelessAPI;
